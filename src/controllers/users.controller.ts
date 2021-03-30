@@ -3,7 +3,7 @@ import { CrudController } from './base/crud.controller';
 
 export class UsersController extends CrudController {
   create(req: Request, res: Response): void {
-    throw new Error();
+    res.status(201).json({ message: 'User created!' });
   }
 
   delete(req: Request, res: Response): void {

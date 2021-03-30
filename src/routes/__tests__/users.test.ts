@@ -13,11 +13,11 @@ describe('Users routes', () => {
         return done();
       });
   });
-  test('POST /users should return status 201', (done) => {
+  test('POST /users should return status 200', (done) => {
     return request(app)
       .post('/users')
       .send({ name: 'Johnny Boy' })
-      .expect(200)
+      .expect(201)
       .end((err) => {
         if (err) return done(err);
         return done();
